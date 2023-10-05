@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+<nav class="navbar">
+
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">
+      <h4>{{title}}</h4>
+    </a>
+
+    <form class="d-flex">
+      <input [(ngModel)]="searchtext" name="abc" class="form-control me-2" type="search" placeholder="Search"
+        aria-label="Search">
+      <button [routerLink]="['/search',searchtext]" (click)="search()" class="btn btn-outline-success"
+        type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+    </form>
+
+    <form class="d-flex">
+      <button routerLink="addcake" class="btn btn-outline-info" style="margin-right: 20px;" type="button">Add a
+        Cake</button>
+      <button *ngIf="isUserLoggedIn==false" routerLink="/login" class="btn btn-outline-success"
+        type="submit" style="margin-right: 20px;">Login</button>
+        <button *ngIf="isUserLoggedIn==false" routerLink="/signup" class="btn btn-outline-primary"
+        type="submit">Sign Up</button>
+      <button routerLink="/cart" *ngIf="isUserLoggedIn==true" style="margin-right: 20px;" class="btn btn-outline-primary"
+        type="submit">My Cart</button>
+        <button routerLink="/myorders" *ngIf="isUserLoggedIn==true" style="margin-right: 20px;" class="btn btn-outline-success"
+        type="submit">My Orders</button>
+      <button (click)="logout()" *ngIf="isUserLoggedIn==true" routerLink="/" class="btn btn-outline-danger"
+        type="submit">Logout</button>
+    </form>
+
+  </div>
+</nav>

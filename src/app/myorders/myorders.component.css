@@ -1,0 +1,19 @@
+h1{
+	margin: 2% 40% 2% 40%;
+}
+img{
+    width: 75px;
+    height: 50px;
+}
+.accordion-button{
+	border-radius: 10px;
+	font-weight: bolder; 
+	background-color: rgb(202, 233, 236);
+}
+.accordion-item{
+	border-radius: 10px;
+}
+table{
+	border-style: solid;
+	border-color: blue;
+}

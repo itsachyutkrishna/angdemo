@@ -1,0 +1,12 @@
+footer {
+    font-family: sans-serif;
+    font-weight: bolder;
+    background-color: rgb(205, 241, 229);
+    margin-top: 5px;
+    bottom: 0;
+
+    left: 0;   
+    width: 100%;
+    color: blue;
+    text-align: center;
+  }

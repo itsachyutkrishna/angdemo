@@ -1,0 +1,24 @@
+<div class="container">
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Price Per Cake</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let each of cartsummarycartdetails">
+        <td>{{each.name}}</td>
+        <td>{{each.price|currency:'INR'}}</td>
+        <td>{{each.quantity}}</td>
+        <td>{{each.quantity*each.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="margin-top:10px; margin-left: 10px " >
+    Total amount: {{cartdetailstotalprice |currency:'INR'}}
+    
+  </div>
+</div>

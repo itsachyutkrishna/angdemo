@@ -1,0 +1,49 @@
+<div class="container">
+   <!-- {{condition1.valid}} -->
+   
+    <form #condition1="ngForm" (submit)="condition1.valid && addaddress()">
+        <div class="form-group">
+            <label>Name</label>
+            <input minlength="2" [(ngModel)]="personaldata.name" name="abc" #condition2="ngModel" required class="form-control">
+            <div style="color:red" *ngIf="condition1.submitted && condition2.errors">
+                <label *ngIf="condition2.errors['required']">Name is Required</label>
+                <label *ngIf="condition2.errors['minlength']">Name must atleast have 2 characters</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Address</label>
+            <input minlength="2" [(ngModel)]="personaldata.address" name="abc" #condition3="ngModel" required class="form-control">
+            <div style="color:red" *ngIf="condition1.submitted && condition3.errors">
+                <label *ngIf="condition3.errors['required']">Address is Required</label>
+                <label *ngIf="condition3.errors['minlength']">Address must atleast have 2 characters</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>City</label>
+            <input minlength="3" [(ngModel)]="personaldata.city" name="abc" #condition3="ngModel" required class="form-control">
+            <div style="color:red" *ngIf="condition1.submitted && condition3.errors">
+                <label *ngIf="condition3.errors['required']">City is Required</label>
+                <label *ngIf="condition3.errors['minlength']">City must atleast have 3 characters</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Pin Code</label>
+            <input minlength="6" [(ngModel)]="personaldata.pincode" name="abc" #condition4="ngModel" required class="form-control">
+            <div style="color:red" *ngIf="condition1.submitted && condition4.errors">
+                <label *ngIf="condition4.errors['required']">Pin Code is Required</label>
+                <label *ngIf="condition4.errors['minlength']">Pin Code must atleast have 6 digits</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input minlength="10" [(ngModel)]="personaldata.phonenumber" name="abc" #condition5="ngModel" required class="form-control">
+            <div style="color:red" *ngIf="condition1.submitted && condition5.errors">
+                <label *ngIf="condition5.errors['required']">Phone is Required</label>
+                <label *ngIf="condition5.errors['minlength']">Phone number must of 10 digits</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary">Add Address</button>
+        </div>
+    </form>
+</div>

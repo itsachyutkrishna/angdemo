@@ -1,0 +1,43 @@
+<form action="loginformdatabase" method="post">
+
+  <div>
+    <h1>Log in</h1>
+    <p>Please fill in this form to login.</p>
+    <hr>
+  </div>
+  <div class="container">
+
+    <label for="uname"><b>Email</b></label>
+    <input [(ngModel)]="userdetails.email" name="abc" type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input [(ngModel)]="userdetails.password" type="password" placeholder="Enter Password" name="psw" required>
+
+    <span>
+      <span><input type="checkbox" checked="checked" name="remember"> Remember me</span>
+    </span>
+
+  </div>
+
+
+  <div class="container" style="background-color:#f1f1f1">
+
+    <div class="row">
+
+      <div class="col">
+        <button (click)="login()" type="submit">Login</button>
+
+      </div>
+
+      <div class="col">
+        <button routerLink="/signup" class="btn btn-primary"> Not a user? Sign Up</button>
+      </div>
+
+    </div>
+
+
+  </div>
+  <div *ngIf="error=='Invalid Credentials'" class="alert alert-danger" role="alert">
+    {{error}}
+  </div>
+</form>

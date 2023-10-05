@@ -1,0 +1,12 @@
+.card{
+    padding:2%;
+    border-width: 5px;
+    border-color: blue;
+    border-style: groove;
+    border-radius: 20px;
+    margin: 2% 10% 0 10%;
+}
+.checked {
+    color: orange;
+  }
+

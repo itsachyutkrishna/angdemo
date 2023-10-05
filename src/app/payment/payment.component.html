@@ -1,0 +1,28 @@
+<div class="form">
+  <p>Hey! <b>{{personaldetails.name}}</b> , Your Order </p>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let each of cartdetailsforpayment let i=index">
+            <th scope="row">{{i+1}}</th>
+            <td><img [src]="each.image"></td>
+            <td>{{each.name}}</td>
+            <td>{{each.price|currency:'INR'}}</td>
+            <td>{{each.quantity}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>will be delivered to <b>{{personaldetails.address}} , {{personaldetails.city}}</b> , Pin Code:<b>{{personaldetails.pincode}}</b></p>
+      <p>Availble Payment method: Cash On Delivery</p>
+      <p>Delivery Agent will Contact you via your phone number: <b>{{personaldetails.phonenumber}}</b></p>
+      <p>Be ready with cash of {{cartdetailsprice|currency:'INR'}}</p>
+    <button  routerLink="/orderplaced" (click)="placeorder()" class="btn btn-primary">Place Order </button>
+</div>

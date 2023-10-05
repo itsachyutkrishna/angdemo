@@ -1,0 +1,47 @@
+.form{
+    padding:1%;
+    border-width: 5px;
+    border-color: blue;
+    border-style: groove;
+    border-radius: 20px;
+    margin: 1% 10% 0% 10%;
+}
+
+.heading{
+    text-align: center;
+    padding: 10px;
+}
+
+.half-box{
+    width:90%;
+    background-color:lightblue;
+    
+}
+
+.float-left{
+    float: left;
+    padding: 10px;
+}
+
+.float-right{
+    float: right;
+    padding: 10px;
+}
+
+.btn-custom{
+    border-radius: 25px;
+    width:100%;
+    margin-top: 10px;
+}
+
+.full-box{
+    background-color:lightblue;
+    
+    
+}
+
+.div1{
+    display:grid;
+    grid-template-columns: 50% 1fr;
+    
+}

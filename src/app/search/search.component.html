@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col cards" *ngFor="let eachsearch of searchresults" style="margin: 5px;">
+        <img src="{{eachsearch.image}}" class="card-img-top" style="width:16rem; height: 12rem;" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{eachsearch.name}}</h5>
+            <p class="card-text">Price: Rs. {{eachsearch.price}}</p>
+        </div>
+        <button [routerLink]="['/cakedetails',eachsearch.cakeid]" type="button" class="btn btn-info" >Cake
+            Details</button>
+    </div>
+</div>

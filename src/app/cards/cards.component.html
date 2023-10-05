@@ -1,0 +1,17 @@
+<!-- <div class="card" >
+  <img src="{{cakedata.cakeimage}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{cakedata.caketitle}}</h5>
+    <p class="card-text">Price: Rs. {{cakedata.cakeprice}}</p>
+    <p class="alert alert-success" *ngIf="cakedata.eggless">Eggless</p>
+    <a href="#" class="btn btn-primary">Buy Now</a>
+  </div>
+</div> -->
+<div class="card" >
+<img  src="{{cakecard.image}}" class="card-img-top" style="width:16rem; height: 12rem;" alt="...">
+  <div class="card-body">
+    <h5  class="card-title">{{cakecard.name}}</h5>
+    <p class="card-text">Price: {{cakecard.price|currency:'INR'}}</p>
+  </div>
+  <button [routerLink]="['/cakedetails',cakecard.cakeid]" type="button" class="btn btn-info">Cake Details</button>
+</div>

@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="card">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <img src="{{cakedetails.image}}" alt="Denim Jeans" style="width: 500px;height: 500 px;">
+            </div>
+            <div class="col-sm">
+                <h1><b>{{cakedetails.name}}</b></h1>
+                <p class="price"><b> Price: </b>{{cakedetails.price|currency:'INR'}} </p>
+                <p class="weight"><b>Weight: </b>{{cakedetails.weight}}</p>
+                <p>
+                    <span><b>Ratings: </b>{{cakedetails.ratings}}</span>
+                </p>
+                <p>
+                    <span><b>Likes: </b>{{cakedetails.likes}}</span>
+                </p>
+                <p>
+                    <span><b>Ingredients: </b>{{cakedetails.ingredients}}</span>
+                </p>
+                <p>
+                    <span><b>Type: </b>{{cakedetails.type}}</span>
+                </p>
+                <p>
+                    <span><b>Flavours: </b>{{cakedetails.flavour}}</span>
+                </p>
+                <div *ngIf="cakedetails.eggless" class="alert alert-success" role="alert">
+                    Eggless
+                </div>
+
+                <p class="description"><b>Description:  </b> {{cakedetails.description}}</p>
+                <p><button (click)="addtocart()" class="btn btn-info"><b>Add to Cart</b></button></p>
+            </div>
+        </div>
+
+    </div>
